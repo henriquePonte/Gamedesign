@@ -24,6 +24,7 @@ SysInfo.txt
 *.mdb
 *.opendb
 *.VC.db
+.vs
 
 # OS files
 .DS_Store
