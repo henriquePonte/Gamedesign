@@ -279,12 +279,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 494963835992078968, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2706604390092497483, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
-      propertyPath: InteractionWarning
-      value: 
-      objectReference: {fileID: 826964546}
     - target: {fileID: 3887034894292928871, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.99073
@@ -467,11 +463,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1257782624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &826964546 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1814741824883363628, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
-  m_PrefabInstance: {fileID: 186791189}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &889533989
 PrefabInstance:
   m_ObjectHideFlags: 0
