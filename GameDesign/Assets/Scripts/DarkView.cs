@@ -6,6 +6,6 @@ public class DarkView : MonoBehaviour
 
     void Update()
     {
-        transform.position = player.position; // segue o jogador
+        //transform.position = player.position; // segue o jogador
     }
 }
