@@ -51,8 +51,12 @@ public class Player : MonoBehaviour
                     firstInteractible.GetComponent<Key>().giveItem();
                     break;
                 case memoryGateTag:
-                    SceneManager.LoadScene(firstInteractible.GetComponent<ChangeScene>().sceneName);
-                    break;
+                    ChangeScene changeScript = firstInteractible.GetComponent<ChangeScene>();
+                    if (changeScript != null)
+                    {
+                        changeScript.TriggerSceneChange();
+                    }
+                break;
                 case interactableTag:
                     string neededItem = firstInteractible.GetComponent<Interactable>().reactor;
                     if (inventory.Contains(neededItem) && !neededItem.Equals("")){

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1437953276890386859}
   - component: {fileID: 3180610912408102932}
-  - component: {fileID: 4901516285137508981}
   - component: {fileID: 4512161358178661718}
   - component: {fileID: 2517466258645387875}
+  - component: {fileID: 4901516285137508981}
   m_Layer: 0
   m_Name: Base Memory
   m_TagString: MemoryGate
@@ -93,19 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4901516285137508981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8933729338017961161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51fc51162d1f33f4bafcceca3adb7560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
-  sceneName: Memory1
 --- !u!58 &4512161358178661718
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,3 +175,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.1517581, y: 0.1517581}
   m_EdgeRadius: 0
+--- !u!114 &4901516285137508981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933729338017961161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc51162d1f33f4bafcceca3adb7560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
+  sceneName: Memory1
