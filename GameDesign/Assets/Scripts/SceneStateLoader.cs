@@ -20,17 +20,17 @@ public class SceneStateLoader : MonoBehaviour
             yield break;
 
         // Lista de todos os objetos com UniqueID na cena
-        UniqueID[] allIDs = GameObject.FindObjectsOfType<UniqueID>();
+        UniqueID[] allIDs = GameObject.FindObjectsOfType<UniqueID>(true); 
 
         foreach (var objData in data.objects)
         {
             foreach (var id in allIDs)
             {
-                if (id.id == objData.objectName) 
+                if (id.id == objData.objectName)
                 {
                     GameObject obj = id.gameObject;
 
-                    // Se for ITEM, aplicar lógica de coleta
+                    // ----- ITENS -----
                     if (obj.CompareTag("Item"))
                     {
                         if (GameManager.instance.IsItemCollected(id.id))
@@ -38,15 +38,18 @@ public class SceneStateLoader : MonoBehaviour
                         else
                             obj.SetActive(objData.isActive);
 
-                        // Nada mais a restaurar para itens
                         break;
                     }
 
-                    // Se NÃO for item, restaura normalmente
+                    // ----- OBJETOS NORMAIS -----
+
+                    // 1) Primeiro ativa/desativa
+                    obj.SetActive(objData.isActive);
+
+                    // 2) Depois restaura transform
                     obj.transform.position = objData.position;
                     obj.transform.rotation = objData.rotation;
                     obj.transform.localScale = objData.scale;
-                    obj.SetActive(objData.isActive);
 
                     break;
                 }

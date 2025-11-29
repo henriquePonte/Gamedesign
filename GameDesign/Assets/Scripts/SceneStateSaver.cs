@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 public class SceneStateSaver : MonoBehaviour
 {
@@ -9,25 +8,40 @@ public class SceneStateSaver : MonoBehaviour
         SceneSaveData data = new SceneSaveData();
         data.objects = new List<SceneObjectData>();
 
-        GameObject[] rootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
-        foreach (var root in rootObjects)
-            SaveObjectRecursive(root, data);
+        // Pega TODOS os objetos da cena, ATIVOS e DESATIVADOS
+        GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
 
+        foreach (GameObject obj in allObjects)
+        {
+            // Ignorar objetos internos do Unity
+            if (obj.hideFlags != HideFlags.None)
+                continue;
+
+            // Não salvar objetos que não estão na cena atual
+            if (obj.scene.name == null || obj.scene.name == "")
+                continue;
+
+            SaveObject(obj, data);
+        }
+
+        // Salvar posição do jogador
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
             data.playerPosition = player.transform.position;
 
+        // Enviar dados para o GameManager
         GameManager.instance.SaveCurrentScene(data);
     }
 
-    private void SaveObjectRecursive(GameObject obj, SceneSaveData data)
+    private void SaveObject(GameObject obj, SceneSaveData data)
     {
-        var unique = obj.GetComponent<UniqueID>();
-        string id = unique != null ? unique.id : obj.name;
+        UniqueID unique = obj.GetComponent<UniqueID>();
+        if (unique == null)
+            return; // só salvamos objetos que têm UniqueID
 
         SceneObjectData objData = new SceneObjectData
         {
-            objectName = id,
+            objectName = unique.id,
             position = obj.transform.position,
             rotation = obj.transform.rotation,
             scale = obj.transform.localScale,
@@ -35,8 +49,5 @@ public class SceneStateSaver : MonoBehaviour
         };
 
         data.objects.Add(objData);
-
-        foreach (Transform child in obj.transform)
-            SaveObjectRecursive(child.gameObject, data);
     }
 }
