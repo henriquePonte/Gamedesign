@@ -9,26 +9,25 @@ public class SceneStateSaver : MonoBehaviour
         SceneSaveData data = new SceneSaveData();
         data.objects = new List<SceneObjectData>();
 
-        GameObject[] allObjects = SceneManager.GetActiveScene().GetRootGameObjects();
-        foreach (GameObject root in allObjects)
-        {
+        GameObject[] rootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+        foreach (var root in rootObjects)
             SaveObjectRecursive(root, data);
-        }
 
-        // guardar a posição do jogador
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
             data.playerPosition = player.transform.position;
 
         GameManager.instance.SaveCurrentScene(data);
-        //Debug.Log($"SceneStateSaver: Cena '{SceneManager.GetActiveScene().name}' saved com sucesso!");
     }
 
     private void SaveObjectRecursive(GameObject obj, SceneSaveData data)
     {
+        var unique = obj.GetComponent<UniqueID>();
+        string id = unique != null ? unique.id : obj.name;
+
         SceneObjectData objData = new SceneObjectData
         {
-            objectName = obj.name,
+            objectName = id,
             position = obj.transform.position,
             rotation = obj.transform.rotation,
             scale = obj.transform.localScale,

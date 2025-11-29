@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, SceneSaveData> sceneStates = new Dictionary<string, SceneSaveData>();
     public HashSet<string> collectedItems = new HashSet<string>();
 
+    public List<string> playerInventory = new List<string>();
+
     void Awake()
     {
         if (instance == null)

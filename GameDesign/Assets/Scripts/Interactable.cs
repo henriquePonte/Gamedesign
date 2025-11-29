@@ -10,30 +10,83 @@ public class Interactable : MonoBehaviour
     public GameObject newState;
     public GameObject player;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(newState != null) newState.SetActive(false);
+        if (newState != null)
+            newState.SetActive(false);
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-
-    //}
     public void OnInteraction()
     {
         Debug.Log(interactionFeedback);
     }
 
-    public void OnItemInteraction()
+
+/*
+public void OnItemInteraction()
+{
+    if (newState != null)
     {
         newState.SetActive(true);
-        if (returnItem != null) {
-            player.GetComponent<Player>().recieveItem(returnItem);
-        }
-        //Destroy(gameObject);
-        Debug.Log(itemFeedback);
         gameObject.SetActive(false);
     }
+
+    if (returnItem != null)
+        player.GetComponent<Player>().recieveItem(returnItem);
+
+    Debug.Log(itemFeedback);
+
+    FindObjectOfType<SceneStateSaver>().SaveScene();
+
+    if (newState != null && player != null)
+    {
+        Player playerScript = player.GetComponent<Player>();
+        if (playerScript != null)
+        {
+            playerScript.AddInteractable(newState);
+            playerScript.RemoveInteractable(gameObject);
+        }
+    }
+
+    ChangeScene changeScript = newState?.GetComponent<ChangeScene>();
+    if (changeScript != null)
+        changeScript.TriggerSceneChange();
+}
+
+*/
+
+public void OnItemInteraction()
+{
+    if (newState != null)
+    {
+        newState.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    if (returnItem != null)
+        player.GetComponent<Player>().recieveItem(returnItem);
+
+    Debug.Log(itemFeedback);
+
+    FindObjectOfType<SceneStateSaver>().SaveScene();
+
+    Player playerScript = player.GetComponent<Player>();
+
+    // Força Unity a atualizar fisicamente o novo collider
+    Physics2D.SyncTransforms();
+
+    // Se o player está em cima do collider do newState, adiciona
+    Collider2D c = newState?.GetComponent<Collider2D>();
+    if (c != null && c.OverlapPoint(player.transform.position))
+    {
+        playerScript.AddInteractable(newState);
+    }
+
+    playerScript.RemoveInteractable(gameObject);
+
+    ChangeScene changeScript = newState?.GetComponent<ChangeScene>();
+    if (changeScript != null)
+        changeScript.TriggerSceneChange();
+}
+
 }
