@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
     public string returnItem;
     public string interactionFeedback;
     public string itemFeedback;
+    public GameObject dialogBox;
 
     public GameObject newState;
     public GameObject player;
@@ -18,6 +19,7 @@ public class Interactable : MonoBehaviour
 
     public void OnInteraction()
     {
+        dialogBox.GetComponent<DialogBox>().SelectDialog(interactionFeedback);
         Debug.Log(interactionFeedback);
     }
 
@@ -55,38 +57,46 @@ public void OnItemInteraction()
 
 */
 
-public void OnItemInteraction()
-{
-    if (newState != null)
+    public void OnItemInteraction()
     {
-        newState.SetActive(true);
+        if (newState != null)
+        {
+            newState.SetActive(true);
+            gameObject.SetActive(false);
+        }
+
+        if (returnItem != null)
+            player.GetComponent<Player>().recieveItem(returnItem);
+
+        Debug.Log(itemFeedback);
+
+        if (returnItem != null)
+        {
+            player.GetComponent<Player>().recieveItem(returnItem);
+        }
+        //Destroy(gameObject);
+        dialogBox.GetComponent<DialogBox>().SelectDialog(itemFeedback);
+        Debug.Log(itemFeedback);
         gameObject.SetActive(false);
+
+        FindObjectOfType<SceneStateSaver>().SaveScene();
+
+        Player playerScript = player.GetComponent<Player>();
+
+        // Força Unity a atualizar fisicamente o novo collider
+        Physics2D.SyncTransforms();
+
+        // Se o player está em cima do collider do newState, adiciona
+        Collider2D c = newState?.GetComponent<Collider2D>();
+        if (c != null && c.OverlapPoint(player.transform.position))
+        {
+            playerScript.AddInteractable(newState);
+        }
+
+        playerScript.RemoveInteractable(gameObject);
+
+        ChangeScene changeScript = newState?.GetComponent<ChangeScene>();
+        if (changeScript != null)
+            changeScript.TriggerSceneChange();
     }
-
-    if (returnItem != null)
-        player.GetComponent<Player>().recieveItem(returnItem);
-
-    Debug.Log(itemFeedback);
-
-    FindObjectOfType<SceneStateSaver>().SaveScene();
-
-    Player playerScript = player.GetComponent<Player>();
-
-    // Força Unity a atualizar fisicamente o novo collider
-    Physics2D.SyncTransforms();
-
-    // Se o player está em cima do collider do newState, adiciona
-    Collider2D c = newState?.GetComponent<Collider2D>();
-    if (c != null && c.OverlapPoint(player.transform.position))
-    {
-        playerScript.AddInteractable(newState);
-    }
-
-    playerScript.RemoveInteractable(gameObject);
-
-    ChangeScene changeScript = newState?.GetComponent<ChangeScene>();
-    if (changeScript != null)
-        changeScript.TriggerSceneChange();
-}
-
 }

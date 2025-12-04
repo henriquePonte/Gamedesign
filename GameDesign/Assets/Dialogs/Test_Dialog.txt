@@ -1,0 +1,9 @@
+Test Dialog;something
+***Base;Text Example, 1 2 3
+***thing;this is a thing;nothing else
+***no;can't open this
+***huh;how did you access this
+***how;this doesn't even have an item
+***hole1;the first hole
+***hole2;the second hole
+***key1;got key
