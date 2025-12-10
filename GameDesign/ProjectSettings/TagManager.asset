@@ -7,6 +7,7 @@ TagManager:
   - MemoryGate
   - Item
   - Interactable
+  - Teleport
   layers:
   - Default
   - TransparentFX

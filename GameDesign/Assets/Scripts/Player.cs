@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     private List<string> inventory;
     private List<GameObject> interactables;
 
+    private const string teleportTag = "Teleport";
+
+
     void Start()
     {
         inventory = new List<string>(GameManager.instance.playerInventory);
@@ -72,22 +75,33 @@ public class Player : MonoBehaviour
                         firstInteractible.GetComponent<Interactable>().OnInteraction();
                     }
                     break;
+                case teleportTag:
+                    TeleportArea tp = firstInteractible.GetComponent<TeleportArea>();
+                    if (tp != null)
+                    {
+                        tp.TeleportPlayer(gameObject); 
+                        interactables.Remove(firstInteractible);
+                    }
+                    break;
+
             }
         }
     }
 
-public void recieveItem(string item)
-{
-    Debug.Log(item);
-    inventory.Add(item);
+    public void recieveItem(string item)
+    {
+        Debug.Log(item);
+        inventory.Add(item);
 
-    GameManager.instance.playerInventory = new List<string>(inventory);
-}
+        GameManager.instance.playerInventory = new List<string>(inventory);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string collisionTag = collision.tag;
-        if (collisionTag == memoryGateTag || collisionTag == itemTag || collisionTag == interactableTag)
+
+        if (collisionTag == memoryGateTag || collisionTag == itemTag || 
+            collisionTag == interactableTag || collisionTag == teleportTag)
         {
             if (interactables.Count == 0)
                 InteractionWarning.SetActive(true);
@@ -100,9 +114,12 @@ public void recieveItem(string item)
     private void OnTriggerExit2D(Collider2D collision)
     {
         string collisionTag = collision.tag;
-        if (collisionTag == memoryGateTag || collisionTag == itemTag || collisionTag == interactableTag)
+
+        if (collisionTag == memoryGateTag || collisionTag == itemTag || 
+            collisionTag == interactableTag || collisionTag == teleportTag)
         {
             interactables.Remove(collision.gameObject);
+
             if (interactables.Count == 0)
                 InteractionWarning.SetActive(false);
         }
