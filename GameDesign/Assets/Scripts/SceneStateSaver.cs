@@ -17,14 +17,14 @@ public class SceneStateSaver : MonoBehaviour
             if (obj.hideFlags != HideFlags.None)
                 continue;
 
-            // Não salvar objetos que não estão na cena atual
+            // Não guardar objetos que não estão na cena atual
             if (obj.scene.name == null || obj.scene.name == "")
                 continue;
 
             SaveObject(obj, data);
         }
 
-        // Salvar posição do jogador
+        // guardar posição do jogador
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
             data.playerPosition = player.transform.position;
@@ -37,7 +37,7 @@ public class SceneStateSaver : MonoBehaviour
     {
         UniqueID unique = obj.GetComponent<UniqueID>();
         if (unique == null)
-            return; // só salvamos objetos que têm UniqueID
+            return; // só guardamos objetos que têm UniqueID
 
         SceneObjectData objData = new SceneObjectData
         {
