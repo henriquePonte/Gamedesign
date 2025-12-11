@@ -1,0 +1,48 @@
+Aunt's Home;Yup, this is the place;Huh, it's been a while since I last was here;Now I believe that should be in the basement;...;Let's get this over with
+***CoatHanger;Just a regular coat hanger, nothing special
+***EntrywayDoorLocked;Huh? Why is this door locked?;And with a combination lock?;"Date of birth";Why in the world did she add another lock?;Ugh whatever, what was the date?;DAMMIT I can't remember;Maybe there is a postcard or something somewhere?
+***EmptyDrawer;Let's see here;nothing
+***MemoryVase;Huh, whats this?;Hey, it kinda looks like that one...;Yeah, the one I broke, and then rebuilt...;<Memory_1>
+***EntrywayDoorOpenedFirst;Bingo, it opened;Now I can finally progress
+***EntrywayDoorOpened;It's open now;But why did she need to have another lock?
+***UpstairsDoorLocked;Wait, ANOTHER locked door?;Was she afraid to get robed or something?;And this one needs a key;Briliant;Let's hope she has a spare lying around somewhere
+***BasementDoorLocked;Wait, why is the basement locked;Was she hiding a monster in there or something?;Then let's hope this "Boss key" isn't too much of a pain to find;
+***Chair;Just a regular chair;What else is there to say?;I mean, it looks kinda comfy;And the craftmanship is nothing to scof at;But then again so are all the chairs;Wait, they are all from the same company, probably mass factured if then;I guess that does lower the artistic integrity of them;But then again, someone had to design them, so does that give it some soul;...;Oh wow, I guess there was more to say
+***LivingRoomTable;A big if plain table;Seems like a nice centerpiece;
+***PictureMirror;Why is there a picture of an ugly, tired, messy...;Oh nevermind, it just a mirror framed like a picture
+***Downstairs'Sink;A simple sink with a mirror;Kinda looks like the one at home;But a lot cleaner
+***Downstairs'Toilet;Just a toilet;but the top looks weirdly uneven...
+***KitchenTable;A small table likely used for eating
+***Oven;An oven used for cooking;Kinda weird to see one soo clean; Or maybe I just need to clean mine;Heh, maybe I will make my stance once I see another as clean
+***Cupboards;A bunch of cupboards with food and cooking utensils;Not that they will have much use
+***Flowerpot;What a beautiful flower, I have never seen one like this;I never knew that Aunt Teodora was such a good garderner
+***Downstairs'Sofa;A comfy looking sofa;God I wish I could just sit down and sleep for like an hour or two
+***TV;A nice looking flat-screen-TV;Damn, I wish I could just stand in front and sleep to the sound of the TV
+***CoffeeTable;A small table to put stuff on
+***MemoryBook;A waist-high table with a singular book on top;hold on, I recognise that book;wasn't that the one that got stolen and I tried to get it back?;Yeah, it was;<Memory_2>
+***MemoryPhoto;A chrome looking fridge with some things on the front;Wait, that picture;Is from that festival, it even has that date;It must be the one we sent;<Memory_3>
+***ToiletOpenedFirst;Ok, let's see if she kept her promise;Yup there is a key here;At least it was not inside the pipe
+***ToiletOpened;I hope me opening the toilet didn't break it;If it did I hope I don't have to pay the bill
+***UpstairsDoorOpenedFirst;Yes, another door opened;Lets hope it is the last
+***UpstairsDoorOpened;Ok seriously, why so many locked doors?;Was she afraid of something?;Or paranoid about someone?
+***Bookshelf;A tall bookshelf;It is, shockingly, filled with books;None of which particularly interest me
+***OfficeDesk;A large and imposing desk with a small chair;Though a big bigger that necessary if you ask me;Was this aunt's version of a mesuring contest?
+***Upstairs'Toilet;Uhg, I guess it is worth checking;Huh, what does it say here;"Not this one";Well at least it stopped me
+***ShowerSection;A clean looking shower;That reminds me, I need a shower;Maybe when I am done here;then again, I said that last time
+***MainBed;A large and ornamental bed;I almost makes up for the fact that an dying person slept here;At least those were some comfy final days
+***MainDresser;A dresser next to the bed;The chance for there to be anything worth checking is nothing compared to the chance of fiding my own aunt's underwear there;Soooo, hard pass;
+***HallwayTable;A table situated in the middle of the hallway;Better than an empty one
+***EmptyCloset;A tall closet;Let's see here...;Nothing;I mean, I guess she didn't have that many guests recently
+***EndTable;A little endtable for storage
+***GuestBed;A slightly less ornamental bed for guests;still pretty fancy
+***PlantBook;A table with a diferent book on top;This one seems to be about flowers;Huh, there is a piece of paper sticking out;On the page of a flower that is just like the one in the living room;Huh, what does it say;It bloom only once every 10 years, starting once it has been planted;Damn that is one tough plant, but I guess it was her favorite or something;Impresive Aunt Thea, impresive
+***MemorySink;A impresive sink in the main bathroom;Hold on, that picture;<Memory_4>
+***MemoryInCloset;Hold on, what's this doing here;<Memory_5>
+***CorrectBook;Now let's see;AHA, that's the book;Aaand, its a safe;Uhhhggg...
+***Safe;Let's see;"Day of freedom";Ok, at least this one has a clue;But what is the day of freedom?
+***SafeCracked;Let's try this;Bingo, and what is inside?;The basement key!;YES, now I can finaly get that will
+***BasementDoorOpened;And here we go;Finally;Now, it should be here somewhere
+***BasementShelves;Just a dusty shelve with a bunch of trash
+***BasementArchive;An archive with a bunch of paperwork;Not what I am looking for
+***Will;Ha, here it is;Ok now I should be able to leave
+***LastMemory;Huh;What's this;What's it doing in here?<Memory_6>
