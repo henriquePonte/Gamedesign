@@ -20,7 +20,7 @@ public class SceneStateLoader : MonoBehaviour
             yield break;
 
         // Lista de todos os objetos com UniqueID na cena
-        UniqueID[] allIDs = GameObject.FindObjectsOfType<UniqueID>(true); 
+        UniqueID[] allIDs = Object.FindObjectsByType<UniqueID>(FindObjectsSortMode.None);
 
         foreach (var objData in data.objects)
         {

@@ -79,7 +79,7 @@ public void OnItemInteraction()
         Debug.Log(itemFeedback);
         gameObject.SetActive(false);
 
-        FindObjectOfType<SceneStateSaver>().SaveScene();
+        Object.FindFirstObjectByType<SceneStateSaver>().SaveScene();
 
         Player playerScript = player.GetComponent<Player>();
 
