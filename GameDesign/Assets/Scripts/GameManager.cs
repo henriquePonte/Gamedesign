@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public HashSet<string> collectedItems = new HashSet<string>();
 
     public List<string> playerInventory = new List<string>();
+    public int testId = 0;
+    public string testFile;
+    public string[] testParameters;
 
     void Awake()
     {

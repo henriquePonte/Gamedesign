@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
@@ -7,6 +8,12 @@ using UnityEngine;
 public class DialogBox : MonoBehaviour
 {
     public TextAsset dialogFile;
+
+    private const string testControlerTag = "TestManager";
+
+    private GameObject testCotroller;
+
+    private DateTime dialogStart;
 
     private class DialogText
     {
@@ -31,6 +38,7 @@ public class DialogBox : MonoBehaviour
     {
         string rawDialog = dialogFile.text;
         string[] allDialogs = rawDialog.Split("***");
+        testCotroller = GameObject.Find(testControlerTag);
         dialogText = new List<DialogText>();
         tick = 0;
         foreach (string dialog in allDialogs)
@@ -49,6 +57,8 @@ public class DialogBox : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && tick > -1)
         {
             tick++;
+            TimeSpan lastDialog = DateTime.Now - dialogStart;
+            if(lastDialog < TimeSpan.FromMilliseconds(10000)) testCotroller.GetComponent<GQMTestController>().newDialog(lastDialog);
             if (tick < chosenDialog.texts.Length) {
                 gameObject.GetComponent<TextMeshProUGUI>().text = chosenDialog.texts[tick];
             } else {
@@ -73,6 +83,7 @@ public class DialogBox : MonoBehaviour
                 chosenDialog = individualText;
                 gameObject.GetComponent<TextMeshProUGUI>().text = chosenDialog.texts[0];
                 tick = 0;
+                dialogStart = DateTime.Now;
             }
         }
     }

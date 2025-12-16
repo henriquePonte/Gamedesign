@@ -5,6 +5,8 @@ public class ChangeScene : MonoBehaviour
 {
     public string sceneName;
 
+    private const string testControlerTag = "TestManager";
+
     public void TriggerSceneChange()
     {
         SceneStateSaver saver = FindFirstObjectByType<SceneStateSaver>();
@@ -12,6 +14,9 @@ public class ChangeScene : MonoBehaviour
             saver.SaveScene();
 
         if (!string.IsNullOrEmpty(sceneName))
+        {
+            GameObject.Find(testControlerTag).GetComponent<GQMTestController>().enteringLocation(sceneName);
             SceneManager.LoadScene(sceneName);
+        }
     }
 }
