@@ -1,0 +1,15 @@
+Test Dialog;something
+***chair;Apart from mine, all chairs are dusty
+***counter;Huh, it needs some cleaning; and to be filled
+***table;Far too big for me
+***bed;I just woke up;Though, I don't know why
+***closet;Nah, I'm confy the way I am
+***bedtable;Nothing important here
+***shower;I showered three days ago;I should be fine for another three
+***sink;A bit dirty, but it works
+***toilet;I don't really feel like peeing
+***sofa;I guess this may be another day of sitting here;Not like I have anything better to do
+***tv;A bit old, but it works;at least a well as a TV is supposed
+***closedDoor;Huh, was that the mailman?;Better get my keys;I think I left them in the sink
+***keys;Here they are;Must have fallen onto the floor
+***getLetter;A letter?;From some law offices?;Wait this looks like aunt's lawyer;Let's see what it says...;Well it was weird she didn't leave any will;Does that mean I'm in it?;Ok, better take care of this

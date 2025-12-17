@@ -26,9 +26,16 @@ public class GQMTestController : MonoBehaviour
         int testid = 1;
         // Check if there are files
         if (all_tests.Length > 0) {
-            StreamReader lastTest = new StreamReader(all_tests[all_tests.Length - 2]);
-            string[] debugSplit = lastTest.ReadLine().Split(',');
-            if (GameManager.instance.testId == 0){
+            if (GameManager.instance.testId == 0)
+            {
+                string filename = all_tests[all_tests.Length - 1];
+                Debug.Log(filename);
+                if (filename.Contains(".meta"))
+                {
+                    filename = all_tests[all_tests.Length - 2];
+                }
+                StreamReader lastTest = new StreamReader(filename);
+                string[] debugSplit = lastTest.ReadLine().Split(',');
                 Debug.Log(debugSplit[0]);
                 testid = int.Parse(debugSplit[0])+1;
                 GameManager.instance.testId = testid;
