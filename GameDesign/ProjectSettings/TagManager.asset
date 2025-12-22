@@ -52,5 +52,8 @@ TagManager:
   - name: darkView
     uniqueID: 2127500821
     locked: 0
+  - name: Reference
+    uniqueID: 2222944727
+    locked: 0
   m_RenderingLayers:
   - Default
