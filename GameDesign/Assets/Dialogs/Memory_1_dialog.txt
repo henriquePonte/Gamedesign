@@ -1,0 +1,21 @@
+Memory_1;Ok, Lets see;Glue, paint, ...;Yes, I got everything I need;Ok, now all I need to do is get the vase pieces;...;Wait, were did I put them?;CRAP, I forgot;I better find those before mom finds out!
+***FixingDesk;I got to fix this before mom finds out;I just need the pieces
+***BedroomDesk;This is my desk;But I didn't hide it here;It would be too suspicious
+***PlayerBed;No time to nap, we have an emergency;But even if we didn't, It would still be too early to sleep;
+***SisterBed;No piece here;But I am sure I had placed one of those somewhere in here
+***BedTable;Nothing here, apart from that lamp
+***SisterCloset;Hah, here it is;I'm suprised she didn't find it
+***ParentsCloset;No shard here;But duh, why would I hide a piece here
+***ParentsBed;Of course there isn't any pieces there;I am not that stupid, I think...
+***DadsOffice;Nope, not here;I mean, it would not be very smart to put it in DAD's OFFICE;Though I guess he doesn't use it that often anymore
+***Toilet;No time to piss now;Maybe later
+***Bathtub;No piece;I guess there was nowhere to hide it
+***BathroomSink;I don't see anything here;And I already washed my hands
+***TableAndChairs;Not here;It has no hiding places, and it's the midle of the room;
+***DownstaisCloset;Let's see...;Yes, another piece;Blending in with the rest of the junk
+***Sofa;Nothing hiding here;If people sitted on top of a piece, the vase cound't be fixed;But I am sure I hid a piece somewhere
+***Television;Come on, yes another piece;After all, they would be too busy to stare at the TV;That they wouldn't behind it
+***KitchenTable;Nothing important;Just the three chairs
+***KitchenCounter;Nothing here;Mom would probably find it anyway
+***Fridge;Hah, a piece;Eww, it's so dusty
+***CoatHanger;Yes, in my jacket, a piece;Though I wonder if this would have made me more suspicious...
