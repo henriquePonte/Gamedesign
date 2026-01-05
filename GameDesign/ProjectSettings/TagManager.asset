@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Teleport
   - TestManager
+  - floor
   layers:
   - Default
   - TransparentFX
