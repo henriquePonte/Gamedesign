@@ -4374,6 +4374,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 494963835992078968, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1964736748}
+    - targetCorrespondingSourceObject: {fileID: 494963835992078968, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1964736749}
   m_SourcePrefab: {fileID: 100100000, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
 --- !u!1 &670410882
 GameObject:
@@ -11718,6 +11721,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1964736749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964736739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29a99188525c4446a0c998e07f847df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSprite
+  upSprite: {fileID: 2471486827960604776, guid: 2ac83262bcfc2ed4aa0a7a366e344a08, type: 3}
+  downSprite: {fileID: -1110756665682772886, guid: 9af573be19166954c828cad8e422a254, type: 3}
+  leftSprite: {fileID: -7972505300642015269, guid: 937e2e3c4cf6a7b48b14e4b8aa6b84eb, type: 3}
+  rightSprite: {fileID: -8765094804362879711, guid: 5b886bbc897b58843865bfc4b778815b, type: 3}
 --- !u!1 &1971124424
 GameObject:
   m_ObjectHideFlags: 0
