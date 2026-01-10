@@ -3314,7 +3314,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 59e03b2ce72814f4caee0dfdb3226cbf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4279,6 +4279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1300389234797857436, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3168504048300293370, guid: 50f7aac867e0e0242896301209ced8f7, type: 3}
     - target: {fileID: 2520956898842520044, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4382,6 +4386,26 @@ PrefabInstance:
     - target: {fileID: 6344757061850355101, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_Size.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985046891227452141, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2237248
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985046891227452141, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2237248
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985046891227452141, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.24468227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985046891227452141, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985046891227452141, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
