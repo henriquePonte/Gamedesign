@@ -26,6 +26,12 @@ public class Player : MonoBehaviour
 
     private GameObject TestCotroller;
 
+    // Animation Variables
+    private SpriteRenderer sr;
+    private Animator anim;
+    private string WALK_ANIMATION = "Walk";
+    private string DIRECTION_ANIMATION = "Direction";
+
 
     void Start()
     {
@@ -34,12 +40,17 @@ public class Player : MonoBehaviour
         TestCotroller = GameObject.Find(testControlerTag);
         still = true;
         stillStart = DateTime.Now;
+
+        //Animation Declaration
+        sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         PlayerMovement();
-        InteractSurroundings();
+        AnimatePlayer();
+        //InteractSurroundings();
     }
 
     void PlayerMovement()
@@ -58,6 +69,21 @@ public class Player : MonoBehaviour
         {
             still = false;
             TestCotroller.GetComponent<GQMTestController>().stillUpdate(DateTime.Now - stillStart);
+        }
+    }
+
+    // Animation Function
+    void AnimatePlayer()
+    {
+        if (!still) {
+            anim.SetBool(WALK_ANIMATION, true);
+            if (movementY != 0) {
+                anim.SetInteger(DIRECTION_ANIMATION, (int) movementY+2);
+            } else {
+                anim.SetInteger(DIRECTION_ANIMATION, (int)movementX + 1);
+            }
+        } else {
+            anim.SetBool(WALK_ANIMATION, false);
         }
     }
 
