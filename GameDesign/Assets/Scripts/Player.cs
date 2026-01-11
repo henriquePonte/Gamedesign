@@ -11,6 +11,13 @@ public class Player : MonoBehaviour
 
     private float movementX, movementY;
 
+    [Header("Footsteps")]
+    public AudioSource footstepSource;
+    public AudioClip[] footstepClips;
+    public float stepInterval = 0.4f;
+
+private float stepTimer;
+
     private const string memoryGateTag = "MemoryGate";
     private const string itemTag = "Item";
     private const string interactableTag = "Interactable";
@@ -58,17 +65,25 @@ public class Player : MonoBehaviour
         movementX = Input.GetAxisRaw("Horizontal");
         movementY = Input.GetAxisRaw("Vertical");
 
-        Vector3 movement = new Vector3(movementX, movementY, 0f) * Time.deltaTime * speed;
+        Vector3 movement = new Vector3(movementX, movementY, 0f).normalized 
+                        * Time.deltaTime * speed;
 
         transform.position += movement;
-        if (movement == Vector3.zero && !still)
+
+        bool isMoving = movement != Vector3.zero;
+
+        HandleFootsteps(isMoving);
+
+        if (!isMoving && !still)
         {
             still = true;
             stillStart = DateTime.Now;
-        } else if (movement != Vector3.zero && still)
+        }
+        else if (isMoving && still)
         {
             still = false;
-            TestCotroller.GetComponent<GQMTestController>().stillUpdate(DateTime.Now - stillStart);
+            TestCotroller.GetComponent<GQMTestController>()
+                .stillUpdate(DateTime.Now - stillStart);
         }
     }
 
@@ -186,4 +201,31 @@ public class Player : MonoBehaviour
     {
         interactables.Remove(obj);
     }
+
+    void HandleFootsteps(bool isMoving)
+{
+    if (!isMoving)
+    {
+        stepTimer = 0f;
+        return;
+    }
+
+    stepTimer += Time.deltaTime;
+
+    if (stepTimer >= stepInterval)
+    {
+        PlayFootstep();
+        stepTimer = 0f;
+    }
+}
+
+    void PlayFootstep()
+    {
+        if (footstepClips.Length == 0) return;
+
+        footstepSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+        AudioClip clip = footstepClips[UnityEngine.Random.Range(0, footstepClips.Length)];
+        footstepSource.PlayOneShot(clip);
+    }
+
 }
