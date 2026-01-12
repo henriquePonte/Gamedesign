@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainHouse.unity
     guid: 28d5b7d4a5008544eac56cc2dcdb4cfd
+  - enabled: 1
+    path: Assets/Scenes/SimpleMap.unity
+    guid: 3c0a41e7b41530947a0cf7b6e39dc978
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
