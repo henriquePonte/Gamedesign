@@ -457,6 +457,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2520956898842520044, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1326137804415709101, guid: 27d0e26279f79244e955cc398984f5cd, type: 3}
     - target: {fileID: 3887034894292928871, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.21
@@ -501,10 +505,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6344757061850355101, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344757061850355101, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 11.99
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 494963835992078968, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1944245880}
   m_SourcePrefab: {fileID: 100100000, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
 --- !u!1 &133598961
 GameObject:
@@ -2104,9 +2119,9 @@ RectTransform:
   m_Father: {fileID: 1996645375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 436.5}
+  m_SizeDelta: {x: -80, y: 793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1035152205
 MonoBehaviour:
@@ -2320,6 +2335,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1118973077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 494963835992078968, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+  m_PrefabInstance: {fileID: 103425379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1122965572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,10 +3538,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1035152204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -396.5}
+  m_SizeDelta: {x: -1640, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805485064
 MonoBehaviour:
@@ -3553,7 +3573,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3570,8 +3590,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4109,6 +4129,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3887034894292928871, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
   m_PrefabInstance: {fileID: 103425379}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1944245880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118973077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29a99188525c4446a0c998e07f847df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSprite
+  upSprites:
+  - {fileID: -7035411596110247235, guid: 1bd2571206a071a4587197db5d23de4e, type: 3}
+  - {fileID: -3899948155342478391, guid: 8617d36bf32b58942aa7cfa538c704b1, type: 3}
+  downSprites:
+  - {fileID: -4695542783928302076, guid: 5beccc64902a74d48aeb3f87727a6c99, type: 3}
+  - {fileID: 1326137804415709101, guid: 27d0e26279f79244e955cc398984f5cd, type: 3}
+  leftSprites:
+  - {fileID: -323578000569883599, guid: 57a0156e9a75b674db9f5e5df7b73e96, type: 3}
+  - {fileID: -1180376206477492252, guid: 67ff1d1cde0e6044082768d14fd170a8, type: 3}
+  rightSprites:
+  - {fileID: -461009182410599274, guid: 6d235694d7178b341bb2057b290bee82, type: 3}
+  - {fileID: 8117073540537905195, guid: 54c389b06a7f4a9429adaa5a21522930, type: 3}
+  animationSpeed: 0.3
 --- !u!1 &1949378064
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,7 +4503,16 @@ MonoBehaviour:
   - 'Mom: Hey sweetie, what are you doing?'
   - 'Kid: Ahm, nothing, just taking a walk.'
   - 'Mom: Inside the house?!'
-  - 'Mom: Inside the house?!'
+  - 'Kid: Yeah! Should I have been walking outside instead?'
+  - 'Mom: No, no. It''s much safer inside, with all the stuff happening lately. Anyway,
+    I was just looking for you because of your aunt. '
+  - 'Kid: Huh?'
+  - 'Mom: As you know, in a week, (Date), she will be 35 years old. I wanted you
+    to try and write a letter to send to her.'
+  - 'Kid: Ok, I will do it now.'
+  - 'Mom: Great, try to do it until tomorrow so it arrives on time.'
+  - (Mom leaves)
+  - 'Kid: Whew!'
 --- !u!1 &2001760111
 GameObject:
   m_ObjectHideFlags: 0
