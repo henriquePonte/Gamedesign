@@ -458,6 +458,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2706604390092497483, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2706604390092497483, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: footstepSource
       value: 
       objectReference: {fileID: 1770695891}
@@ -5525,7 +5529,7 @@ PrefabInstance:
       objectReference: {fileID: 103425380}
     - target: {fileID: 982801185355449260, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
       propertyPath: itemName
-      value: key3
+      value: key1
       objectReference: {fileID: 0}
     - target: {fileID: 982801185355449260, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
       propertyPath: dialogBox
