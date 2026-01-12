@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04ecfc526460354a8ecb31375fd2c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseLetterButton
-  letterUI: {fileID: 1818580040}
+  letterUI: {fileID: 1533175662}
 --- !u!4 &228293233
 Transform:
   m_ObjectHideFlags: 0
@@ -2556,11 +2556,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887034894292928871, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.55
+      value: -12.6
       objectReference: {fileID: 0}
     - target: {fileID: 3887034894292928871, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.89
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3887034894292928871, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_LocalPosition.z
