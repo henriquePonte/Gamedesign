@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class Memory1Dialogue : MonoBehaviour 
 {
@@ -10,13 +11,13 @@ public class Memory1Dialogue : MonoBehaviour
     public string[] dialogueLines;
 
     private int currentLine = 0;
-    //private bool canAdvance = false;
+    private bool canAdvance = false;
 
     void Update()
     {
         if (!dialoguePanel.activeSelf /*|| !canAdvance*/) return;
         
-        if (Input.GetKeyDown(KeyCode.E))
+        if (canAdvance && Input.GetKeyDown(KeyCode.E))
         {
             NextLine();
         }
@@ -31,8 +32,15 @@ public class Memory1Dialogue : MonoBehaviour
         dialogueText.text = dialogueLines[currentLine];
 
         Time.timeScale = 0f; // opcional
+        StartCoroutine(EnableAdvanceNextFrame());
         //canAdvance = false;
-        //Invoke(nameof(EnableAdvance), 0.1f);
+        //Invoke(nameof(EnableAdvance), 0.15f);
+    }
+
+    IEnumerator EnableAdvanceNextFrame()
+    {
+        yield return new WaitForSecondsRealtime(0.1f);
+        canAdvance = true;
     }
 
     //void EnableAdvance()
@@ -42,6 +50,7 @@ public class Memory1Dialogue : MonoBehaviour
 
     void NextLine()
     {
+        canAdvance = false;
         currentLine++;
         if (currentLine >= dialogueLines.Length)
         {
@@ -50,6 +59,7 @@ public class Memory1Dialogue : MonoBehaviour
         else
         {
             dialogueText.text = dialogueLines[currentLine];
+            StartCoroutine(EnableAdvanceNextFrame());
         }
     }
 
@@ -57,6 +67,7 @@ public class Memory1Dialogue : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         Time.timeScale = 1f;
+        canAdvance = false;
 
         Debug.Log("Memory 1 dialogue finished");
         //proxima memoria
