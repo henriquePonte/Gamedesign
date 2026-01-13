@@ -13,8 +13,10 @@ public class Interactable : MonoBehaviour
 
     void Start()
     {
-        if (newState != null)
+        if (newState != null){
+            Debug.Log(newState.name);
             newState.SetActive(false);
+        }
     }
 
     public void OnInteraction()
@@ -87,16 +89,22 @@ public void OnItemInteraction()
         Physics2D.SyncTransforms();
 
         // Se o player está em cima do collider do newState, adiciona
-        Collider2D c = newState?.GetComponent<Collider2D>();
-        if (c != null && c.OverlapPoint(player.transform.position))
+        if (newState != null)
         {
-            playerScript.AddInteractable(newState);
+            Collider2D c = newState?.GetComponent<Collider2D>();
+            if (c != null && c.OverlapPoint(player.transform.position))
+            {
+                playerScript.AddInteractable(newState);
+            }
         }
 
         playerScript.RemoveInteractable(gameObject);
 
-        ChangeScene changeScript = newState?.GetComponent<ChangeScene>();
-        if (changeScript != null)
-            changeScript.TriggerSceneChange();
+        if (newState != null)
+        {
+            ChangeScene changeScript = newState?.GetComponent<ChangeScene>();
+            if (changeScript != null)
+                changeScript.TriggerSceneChange();
+        }
     }
 }

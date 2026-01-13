@@ -43,11 +43,11 @@ public class DialogBox : MonoBehaviour
         tick = 0;
         foreach (string dialog in allDialogs)
         {
-            Debug.Log(dialog);
+            //Debug.Log(dialog);
             dialogText.Add(new DialogText(dialog.Split(';')[0], dialog));
         }
         foreach (string dialog in dialogText[0].texts)
-            Debug.Log(dialog);
+            //Debug.Log(dialog);
         chosenDialog = dialogText[0];
         gameObject.GetComponent<TextMeshProUGUI>().text = dialogText[0].texts[0];
     }

@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2592be3b95c8f44974617393526b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportArea
-  teleportPosition: {x: 0, y: 0, z: 0}
+  teleportPosition: {x: 7.79, y: 4.23, z: 0}
 --- !u!61 &82147100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -455,6 +455,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1814741824883363628, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814741824883363628, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2706604390092497483, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
@@ -531,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6344757061850355101, guid: 295f180b2d349fe4d820bc83694a6f97, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 11.99
+      value: 12.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -553,11 +557,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1437953276890386859, guid: 86d4454ba31842e4483c0aeb3147aa09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.59
+      value: -5.44
       objectReference: {fileID: 0}
     - target: {fileID: 1437953276890386859, guid: 86d4454ba31842e4483c0aeb3147aa09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.68
+      value: 7.73
       objectReference: {fileID: 0}
     - target: {fileID: 1437953276890386859, guid: 86d4454ba31842e4483c0aeb3147aa09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -731,7 +735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Memory1Manager
   dialogue: {fileID: 1996645376}
-  totalPieces: 6
+  key: {fileID: 1237212523}
+  totalPieces: 5
   collectedPieces: 0
 --- !u!114 &185648307
 MonoBehaviour:
@@ -1665,7 +1670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &782365209
 Transform:
   m_ObjectHideFlags: 0
@@ -2903,6 +2908,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniqueID
   id: dd088a1e-3489-4797-818a-81e93ded515f
+--- !u!1 &1237212523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5064331780907798882, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
+  m_PrefabInstance: {fileID: 2094693114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1319443761
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,7 +3584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2592be3b95c8f44974617393526b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportArea
-  teleportPosition: {x: 50, y: 0, z: 0}
+  teleportPosition: {x: 57.42, y: 3.4, z: 0}
 --- !u!61 &1509478570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5692,6 +5702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 5064331780907798882, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5940472121693171910, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5706,11 +5720,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6596830128222310640, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.21
+      value: -6.35
       objectReference: {fileID: 0}
     - target: {fileID: 6596830128222310640, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 6596830128222310640, guid: 0401c9fc752a34c438c3e85873764af6, type: 3}
       propertyPath: m_LocalPosition.z
