@@ -1,0 +1,7 @@
+Escape Dialog;Huff Huff, ok I'm out;Mom should be here somewhere;Where is that shack?
+***Rock;Just some rock, nothing more
+***Bush;Just some random plant
+***Tree;A random boring tree, no time to check
+***PathExit;Not yet, I still have to find mother
+***PathEntry;I am not going back there
+***MomsScarf;Her, scarf;Why is it bloody?;Why is there a pool of blood?;N-no, please *sniff* no;NOOO, MOOOM, *cries*

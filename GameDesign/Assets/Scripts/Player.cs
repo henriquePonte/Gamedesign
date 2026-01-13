@@ -57,7 +57,7 @@ private float stepTimer;
     {
         PlayerMovement();
         AnimatePlayer();
-        //InteractSurroundings();
+        InteractSurroundings();
     }
 
     void PlayerMovement()

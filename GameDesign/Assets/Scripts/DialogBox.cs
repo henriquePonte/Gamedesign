@@ -43,6 +43,7 @@ public class DialogBox : MonoBehaviour
         tick = 0;
         foreach (string dialog in allDialogs)
         {
+            Debug.Log(dialog);
             dialogText.Add(new DialogText(dialog.Split(';')[0], dialog));
         }
         foreach (string dialog in dialogText[0].texts)

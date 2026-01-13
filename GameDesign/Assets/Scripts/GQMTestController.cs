@@ -29,20 +29,20 @@ public class GQMTestController : MonoBehaviour
             if (GameManager.instance.testId == 0)
             {
                 string filename = all_tests[all_tests.Length - 1];
-                Debug.Log(filename);
+                //Debug.Log(filename);
                 if (filename.Contains(".meta"))
                 {
                     filename = all_tests[all_tests.Length - 2];
                 }
                 StreamReader lastTest = new StreamReader(filename);
                 string[] debugSplit = lastTest.ReadLine().Split(',');
-                Debug.Log(debugSplit[0]);
+                //Debug.Log(debugSplit[0]);
                 testid = int.Parse(debugSplit[0])+1;
                 GameManager.instance.testId = testid;
             } else {
                 testid = GameManager.instance.testId;
             }
-            Debug.Log(testid);
+            //Debug.Log(testid);
         } else {
             GameManager.instance.testId = testid;
         }
@@ -54,7 +54,7 @@ public class GQMTestController : MonoBehaviour
         }
         if (GameManager.instance.testParameters.Length == 0) {
             // Create the new test file
-            Debug.Log(pathTestName);
+            //Debug.Log(pathTestName);
             StreamWriter newTestFile = new StreamWriter(new FileStream(pathTestName, FileMode.Create, FileAccess.Write, FileShare.Read));
             parameters = new string[] { testid.ToString(), "aunt's House", "0", "0", "0", timeFormatZero, "0", "0", "0", timeFormatZero, "0", "0", "0", timeFormatZero, timeFormatZero, "0", "0", "0" };
             GameManager.instance.testParameters = parameters;
@@ -73,7 +73,7 @@ public class GQMTestController : MonoBehaviour
         }
         foreach (string item in parameters)
         {
-            Debug.Log(item);
+            //Debug.Log(item);
         }
     }
 
@@ -107,12 +107,12 @@ public class GQMTestController : MonoBehaviour
     private void increaseTime(TimeSpan newTime, int location)
     {
         // Convert from string to time
-        Debug.Log(parameters[location]);
+        //Debug.Log(parameters[location]);
         string lastTiemStr = parameters[location];
-        Debug.Log(lastTiemStr);
+        //Debug.Log(lastTiemStr);
         if (lastTiemStr.Equals(timeFormatZero))
         {
-            Debug.Log(newTime);
+            //Debug.Log(newTime);
             parameters[location] = newTime.ToString(timeFormat);
         }
         else {
